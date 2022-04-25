@@ -1,0 +1,9 @@
+[flake8]
+max-line-length = 88
+per-file-ignores = lambda_handler.py:E402
+exclude =
+    .git,
+    .venv,
+    .pytest_cache,
+    __pycache__,
+    src/lib

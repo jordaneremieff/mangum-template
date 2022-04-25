@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <favicon href="{{ request.url_for('static', path='favicon.ico') }}"/>
+        <link rel="stylesheet"
+              href="{{ request.url_for('static', path='style.css') }}"/>
+        <title>Hello</title>
+    </head>
+    <body>
+        <h1>Anatomy of ASGI request & AWS Lambda function (testing)</h1>
+        <div class="wrapper">
+            <article>
+                <h2>Event</h2>
+                <pre>
+                    <code>{{ lambda_event }}</code>
+                </pre>
+            </article>
+            <article>
+                <h2>Scope</h2>
+                <pre>
+                    <code>{{ asgi_scope }}</code>
+                </pre>
+            </article>
+            <article>
+                <h2>Source</h2>
+                <pre>
+                    <code>{{ source_code }}</code>
+                </pre>
+            </article>
+        </div>
+    </body>
+</html>

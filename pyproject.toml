@@ -1,0 +1,36 @@
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-v --durations=5 -p no:logging -s --ignore .venv --ignore src/lib"
+testpaths = ["tests"]
+pythonpath = [".", "src"]
+norecursedirs = [
+  "data",
+  "static",
+  "node_modules",
+  "bin",
+  "dist",
+  "build",
+  "docs",
+  ".mypy_cache",
+  ".pytest_cache",
+  ".secret",
+  ".txt",
+  ".idea",
+  ".git",
+  ".venv",
+  "*.egg",
+  ".eggs",
+  ".git",
+  ".github",
+  "__pycache__",
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  | src/lib/
+)/
+'''
