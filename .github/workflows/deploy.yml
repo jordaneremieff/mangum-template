@@ -4,7 +4,7 @@ on:
       - main
 
 env:
-  LAMBDA_FUNCTION: ""
+  LAMBDA_FUNCTION: "hello"
 
 jobs:
   deploy:
