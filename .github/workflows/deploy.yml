@@ -5,6 +5,7 @@ on:
 
 env:
   LAMBDA_FUNCTION: "hello"
+  AWS_REGION: "ap-southeast-1"
 
 jobs:
   deploy:
@@ -18,7 +19,7 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
+        aws-region: ${{ env.AWS_REGION }}
     - name: Install requirements
       run: |
         pip install --no-binary :all: --no-compile --target src/lib/ -r requirements/app.txt

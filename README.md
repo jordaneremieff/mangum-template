@@ -1,6 +1,6 @@
 # mangum-template
 
-This is a template for developing [ASGI](https://asgi.readthedocs.io/en/latest/)-compatible Python web apps deployed to [AWS Lambda](https://aws.amazon.com/lambda/). It uses [Mangum](https://github.com/jordaneremieff/mangum) to adapt the AWS Lambda events for an example [FastAPI](https://github.com/tiangolo/fastapi) app.
+This is a template for developing [ASGI](https://asgi.readthedocs.io/en/latest/)-compatible Python web apps deployed to [AWS Lambda](https://aws.amazon.com/lambda/). It uses [Mangum](https://github.com/jordaneremieff/mangum) to adapt AWS Lambda events for an example [FastAPI](https://github.com/tiangolo/fastapi) app.
 
 # Usage
 
@@ -8,7 +8,7 @@ This is a template for developing [ASGI](https://asgi.readthedocs.io/en/latest/)
   
 - Add your `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` secrets to the GitHub project settings.
   
-- Change the value of `LAMBDA_FUNCTION` under the `env` section in the `.github/workflows/deploy.yml` file to your function's name.
+- Change the values of `AWS_REGION` and `LAMBDA_FUNCTION` under the `env` section in the `.github/workflows/deploy.yml` file.
 
 - Push a commit to `main` to run the deployment workflow.
 
